@@ -1,759 +1,769 @@
-$blue: #1B3764;
-$width1920: 1920px;
-$heigth873: 873px;
-$width1299: 1299px;
-$white: #FFFFFF;
-$ikon45: 45px;
+$primary: #1B3764;
+$secondary: #FFCA42;
 
-body {
-  display: flex;
-  align-items: center;
-  margin: 0px auto;
-  width: 100%;
-  height: 100%;
-  block-size: border-box;
-}
+$container: 1300px;
+$header__item-container: 46px;
+$margine-main-content: 150px;
 
-main {
-  display: flex;
-  align-items: center;
-}
+$mobile: 480px;
+$pre_tablet: 767px;
+$tablet: 768px;
+$pre_desktop: 1023px;
+$desktop: 1024px;
+$post_desktop: 1025px;
+$middle_desktop: 1200px;
+$lg_desktop: 1280px;
+$big_desktop: 1440px;
 
-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 251px;
 
-  position: absolute;
-  width: 1299.25px;
-  height: 50px;
-  left: 310px;
-  top: 35px;
-}
 
-.header-ikon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 33px;
-
-  width: 306.25px;
-  height: 45px;
-}
-
-.header-logo {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.header-logo-img {
-  width: 24.5px;
-  height: 28px;
-  padding-right: 8.5px;
-}
-
-.header-logo-txt {
+/* inter-300 - latin_cyrillic */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 125%;
-  /* identical to box height, or 35px */
-  
-  display: flex;
-  align-items: center;
-  
-  color: #FFFFFF;
+  font-weight: 300;
+  src: url('../../fonts/inter-v12-latin_cyrillic-300.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/inter-v12-latin_cyrillic-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/inter-v12-latin_cyrillic-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-300.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/inter-v12-latin_cyrillic-300.svg#Inter') format('svg'); /* Legacy iOS */
 }
-
-.ikons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
-
-  width: 155px;
-  height: 45px;
-}
-
-.ikon-w-45 {
-  display: flex;
-  background-color: $white;
-  width: $ikon45;
-  height: $ikon45;
-  justify-content: center;
-  justify-items: center;
-  align-items: center
-}
-
-.banner {
-  width: 100%;
-  height: 1100px;
-  left: 0px;
-  top: 0px;
-  block-size: border-box;
-  z-index: -1;
-}
-
-.banner-bg {
-  position: absolute;
-  width: 100%;
-  height: 1100px;
-  left: 0px;
-  top: 0px;
-  background-color: $blue;
-  background-size:border-box;;
-  z-index: -1;
-}
-
-.banner-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 95px;
-
-  position: absolute;
-  width: 1301px;
-  height: 800px;
-  left: 309px;
-  top: 185px;
-}
-
-.banner-content{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 16px;
-
-  width: 614px;
-  height: 517px;
-}
-
-.banner-book {
-  display: flex;
-  width: 592px;
-  height: 800px; 
-}
-
-.banner-book-bg1 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 592px;
-  height: 800px;
-  left: 709px;
-  top: 0px;
-
-  background: #FFFFFF;
-  border: 12px solid #DBE1E9;
-}
-
-.banner-content-sub-title {
-  width: 209px;
-  height: 37px;
-
-  display: flex;
-
-}
-
-.banner-content-sub-text {
-  height: 37px;
-  padding-left: 10px;
-
-  font-family: 'Cardo';
-  font-style: italic;
+/* inter-regular - latin_cyrillic */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 154.5%;
-  /* identical to box height, or 37px */
-
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.02em;
-
-  color: #FFFFFF;
+  src: url('../../fonts/inter-v12-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/inter-v12-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/inter-v12-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/inter-v12-latin_cyrillic-regular.svg#Inter') format('svg'); /* Legacy iOS */
 }
-
-.header__button {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0px;
-  gap: 30px;
-
-  width: 742px;
-  height: 50px;
-}
-
-.header__button__menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0px;
-  gap: 26px;
-
-  width: 532px;
-  height: 31.5px;
-}
-
-.cart {
-  display: flex;
-  text-decoration:none;
-  flex-direction: row-reverse;
-}
-
-.cart-announcement {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-self: end;
-  width: 21px;
-  height: 21px;
-  left: 511px;
-  top: 0px;
-  border-radius: 50%;
-
-  background-color: #FFCA42;
-}
-
-.cart-announcement-num {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 10px;
-  line-height: 125%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1B3764;
-}
-
-.header__button__menu-link {
-  padding-left: 20px;
+/* inter-500 - latin_cyrillic */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
-  font-size: 17px;
-  line-height: 125%;
-  /* or 21px */
-
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.01em;
-  color: #FFFFFF;
+  src: url('../../fonts/inter-v12-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/inter-v12-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/inter-v12-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-500.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/inter-v12-latin_cyrillic-500.svg#Inter') format('svg'); /* Legacy iOS */
+}
+/* inter-600 - latin_cyrillic */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../fonts/inter-v12-latin_cyrillic-600.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/inter-v12-latin_cyrillic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/inter-v12-latin_cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-600.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/inter-v12-latin_cyrillic-600.svg#Inter') format('svg'); /* Legacy iOS */
+}
+/* inter-700 - latin_cyrillic */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../fonts/inter-v12-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/inter-v12-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/inter-v12-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/inter-v12-latin_cyrillic-700.svg#Inter') format('svg'); /* Legacy iOS */
+}
+/* inter-800 - latin_cyrillic */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../../fonts/inter-v12-latin_cyrillic-800.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/inter-v12-latin_cyrillic-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/inter-v12-latin_cyrillic-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-800.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/inter-v12-latin_cyrillic-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/inter-v12-latin_cyrillic-800.svg#Inter') format('svg'); /* Legacy iOS */
 }
 
-.order-today {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  width: 180px;
-  height: 50px;
-
-  background-color: #FFCA42;
+/* cardo-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cardo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/cardo-v19-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/cardo-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/cardo-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/cardo-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/cardo-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/cardo-v19-latin-regular.svg#Cardo') format('svg'); /* Legacy iOS */
 }
-
-.order-today p {
+/* cardo-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cardo';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../../fonts/cardo-v19-latin-italic.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/cardo-v19-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/cardo-v19-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/cardo-v19-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/cardo-v19-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/cardo-v19-latin-italic.svg#Cardo') format('svg'); /* Legacy iOS */
+}
+/* cardo-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Cardo';
   font-style: normal;
   font-weight: 700;
-  font-size: 19px;
-  line-height: 125%;
-  /* identical to box height, or 24px */
+  src: url('../../fonts/cardo-v19-latin-700.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/cardo-v19-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/cardo-v19-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/cardo-v19-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/cardo-v19-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/cardo-v19-latin-700.svg#Cardo') format('svg'); /* Legacy iOS */
+}
+/* lexend-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../../fonts/lexend-v17-latin-800.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/lexend-v17-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/lexend-v17-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/lexend-v17-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/lexend-v17-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/lexend-v17-latin-800.svg#Lexend') format('svg'); /* Legacy iOS */
+}
 
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.02em;
-
-  color: #1B3764;
+body {
+  font-family: 'Inter';
 }
 
 a {
   text-decoration: none;
 }
 
-.div-line {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-}
-
-.line {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-}
-
-.banner__content-block {
+.banner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 49px;
+  align-items: center;
+
+  width: 100%;
+  height: 1100px;
+
+  background: $primary;
 }
 
-.banner__content-block-text h1{
-  font-family: 'Cardo';
-  font-style: normal;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: $container;
+  height: 50px;
+
+  margin-top: 40px;
+}
+
+.logo-link {
+  width: 306px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 118px;
+
+  display: flex;
+  align-items: center;
+
+  height: $header__item-container;
+}
+
+.logo:not(:first-child) {
+  margin-left: 5px;
+}
+
+.logo__picture {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 28px;
+}
+
+.logo__text {
   font-weight: 700;
-  font-size: 65px;
-  line-height: 110%;
-  /* or 72px */
+  font-size: 28px;
 
-  letter-spacing: -0.02em;
-
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  
   color: #FFFFFF;
 }
 
-.banner__content-block-text p{
+.link {
+  width: 160px;
+  height: $header__item-container;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.link__item {
+  display: flex;
+  width: $header__item-container;
+  height: $header__item-container;
+  align-items: center;
+  justify-content: center;
+
   font-family: 'Inter';
-  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5 * $header__item-container;
+  color: $primary;
+
+  background:#FFF;
+}
+
+.header-button {
+  width: 742px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  width: 470px;
+  height: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__link {
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.menu-container {
+  width: 532px;
+  height: 31px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  right: 0px;
+  bottom: 14px;
+
+  font-weight: 800;
+  font-size: 10px;
+  color: $primary;
+
+  background: $secondary;
+}
+
+.cart {
+  width: 37px;
+  height: 31px;
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cart__picture {
+  block-size: contain;
+}
+
+.button__order {
+  width: 180px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Cardo';
+  font-weight: 700;
+  font-size: 19px;
+
+  background: $secondary;
+}
+
+.book {
+  width: 592px;
+  height: 800px;
+  box-sizing: border-box;
+
+  background: #FFFFFF;
+  border: 12px solid #DBE1E9;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+
+  width: 1300px;
+  margin-top: 95px;
+}
+
+.sub-title {
+  display: flex;
+  align-items: center;
+}
+
+.line-secondary {
+  width: 34px;
+  border: 1px solid $secondary;
+}
+
+.sub-title__text {
+  margin-left: 15px;
+
+  font-family: 'Cardo';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.title__text {
+  width: 614px;
+
+  display: flex;
+
+  font-family: 'Cardo';
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 110%;
+
+  color: #fff;
+}
+
+.title__sub-text {
+  display: flex;
+
+  font-family: 'Inter';
   font-weight: 400;
   font-size: 19px;
   line-height: 180%;
-  /* or 34px */
 
-  letter-spacing: -0.01em;
+  width: 580px;
+  margin-top: 32px;
 
   color: #B4C7E7;
 }
 
-.banner__content-block-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 37px;
-}
+.read-demo {
+  position: relative;
+  margin-left: 41px;
 
-.read-free-demo {
   font-family: 'Cardo';
   font-style: normal;
   font-weight: 700;
   font-size: 19px;
-  line-height: 125%;
-  /* identical to box height, or 24px */
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.02em;
-
-  color: #FFFFFF;
-  text-decoration:underline;
+  color: #FFF;
+  padding: 0 4px;
 }
 
-.the-dark-light {
-  position: absolute;
-  width: 467px;
-  height: 164px;
-  
-  font-family: 'Lexend';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 70px;
-  line-height: 110%;
-  /* or 77px */
-  
-  text-align: center;
-  letter-spacing: 0.05em;
-  
-  color: #1B3764;
-  z-index: 2;
-}
-
-.banner-book-content-the-dark-light {
+.content-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
+  justify-content: center;
+
 }
 
-.the-dark-light-line-1 {
-  position: absolute;
-  width: 405px;
-  height: 28px;
-  z-index: 1;
-  top: 96px;
-
-  background: #FFCA42;
-}
-
-.the-dark-light-line-2 {
-  position: absolute;
-  width: 252px;
-  height: 28px;
-  z-index: 1;
-  top: 173px;
-
-  background: #FFCA42;
-}
-
-.banner-book-content-text {
-  width: 487px;
-  height: 58px;
-
+.content-button {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.read-demo::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #fff;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 50px;
+}
+
+.details-item {
+  margin-left: 30px;
+}
+
+.details-item__title {
+  margin-bottom: 10px;
+
+  position: relative;
+  font-family: 'Cardo';
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.details-item__sub-title {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 18px;
+  color: #B4C7E7;
+}
+
+.details-item__title::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: $secondary;
+  border-radius: 50%;
+}
+
+.book-sub-title {
   font-family: 'Cardo';
   font-style: italic;
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
-  /* or 29px */
 
   text-align: center;
-  letter-spacing: -0.01em;
 
-  color: #1B3764;
-  
-  justify-content: center;
-  z-index: 2;
-  margin-top: 212px;
+  color: $primary;
 }
 
-.banner-book-content {
+.book-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 592px;
-  height: 800px;
+  gap: 5px;
+
+  position: relative;
+  font-family: 'Lexend';
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 110%;
+
+  text-align: center;
+
+  color: $primary;
+
+  z-index: 1;
 }
 
-.banner-book-image-lamp {
-  position: absolute;
-  width: 341px;
-  height: 424px;
-  left: 794px;
-  top: 334px;
+.book-title__item {
+  position: relative;
 
-  z-index: 2;
+  // z-index: 2;
 }
 
-.banner-book-image-pattern-line-1 {
+.book-title__item::before {
+  content: "";
   position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 13px;
+  height: 28px;
+  background-color: $secondary;
+
+  z-index: -1
+}
+
+.pattern {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pattern__line {
   width: 38.24px;
-  height: 0px;
-  left: 930.48px;
-  top: 296.79px;
+  height: 2px;
 
-  border: 2px solid #1B3764;
-
-  z-index: 2;
+  background: $primary;
 }
 
-.banner-book-image-pattern-line-2 {
-  position: absolute;
-  width: 38.24px;
-  height: 0px;
-  left: 1016.28px;
-  top: 296.79px;
-  
-  border: 2px solid #1B3764;
-
-  z-index: 2;
-}
-
-.banner-book-image-pattern-star {
-  position: absolute;
-  width: 11.19px;
-  height: 37.31px;
-  left: 986.44px;
-  top: 280px;
-  
+.pattetn__star {
+  margin: auto 18px -6px 18px;
   font-family: 'Inter';
-  font-style: normal;
   font-weight: 800;
   font-size: 20px;
-  line-height: 200%;
-  /* or 40px */
+  text-align: center;
+
+  color: $primary;
+}
+
+.content-book {
+  margin-top: 46px;
+}
+
+.image-book {
+  position: relative;
+  height: 450px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-book__title {
+  font-family: 'Cardo';
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 15px;
   
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
   
-  color: #1B3764;
-
-  z-index: 2;
+  color: $primary;
 }
 
-.majority-circle-1 {
-  position: absolute;
-  width: 163px;
-  height: 163px;
-  left: 1053px;
-  top: 289px;
-
-  background: #FFCA42;
-  opacity: 0.5;
-
-  z-index: 2;
-  border-radius: 50%;
-}
-
-.majority-circle-2 {
-  position: absolute;
-  width: 145px;
-  height: 145px;
-  left: 1062px;
-  top: 298px;
-  
-  background: #FFCA42;
-
-  z-index: 3;
-  border-radius: 50%;
-}
-
-.majority-h3 {
-  margin: 0;
-  position: absolute;
-  width: 126px;
-  height: 25px;
-  left: 1072px;
-  top: 325px;
-
+.name-book__sub-title {
   font-family: 'Cardo';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 125%;
-  /* identical to box height, or 25px */
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
   
-  
-  align-items: center;
   text-align: center;
   
-  color: #1B3764;
-
-  z-index: 4;
+  color: $primary;
+  
 }
 
-.majority-text {
-  margin: 0;
+.majority {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+
   position: absolute;
-  left: 82.63%;
-  right: 8.15%;
-  top: 44.25%;
-  bottom: 47.88%;
+  top: -20px;
+  right: 60px;
+
+  background: $secondary;
+  
+  border: 10px solid #ffe4a1;
+}
+
+.majority__sub-title {
+  padding: 10px;
 
   font-family: 'Cardo';
   font-style: italic;
   font-weight: 400;
   font-size: 14px;
-  line-height: 150%;
-  /* or 21px */
   
   text-align: center;
-  letter-spacing: -0.01em;
   
-  color: #1B3764;
-
-  z-index: 4;
+  color: $primary;
 }
 
-.banner-book-image-name {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-
-  position: absolute;
-  width: 310px;
-  height: 77px;
-  left: 850px;
-  top: 680px;
-}
-
-.john-abraham {
+.majority__title {
   font-family: 'Cardo';
-  font-style: normal;
   font-weight: 700;
-  font-size: 25px;
-  line-height: 125%;
-  /* or 31px */
-  
-  display: flex;
-  align-items: center;
-  text-align: center;
-  
-  color: #1B3764;
-
-  z-index: 4;
-}
-
-.john-abraham-p {
-  font-family: 'Cardo';
-  font-style: italic;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 170%;
-  /* or 27px */
+  font-size: 20px;
+  margin-top: 4px;
   
   text-align: center;
-  letter-spacing: -0.01em;
   
-  color: #1B3764;
-
-  z-index: 4;
-
-  white-space: nowrap;
+  color: $primary;
 }
 
-.sep {
-  width: 55px;
-  height: 0px;
-  border: 3px solid #FFCA42;
+.lamp-text {
+  position: relative;
+  width: 170px;
+  margin-bottom: 37px;
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 200%;
+  text-align: center;
+  letter-spacing: 0.15em;
+
+  color: $primary;
+  z-index: 1;
 }
 
-.author-book {
+.lamp-image {
+  position: absolute;
+  left: 85px;
+  top: 50px;
+}
+
+.main-content {
+  padding-top: $margine-main-content;
+  padding-bottom: $margine-main-content;
+
+  display: flex;
+  justify-content: center;
+}
+
+.box-content {
+  width: $container;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
-  gap: 57px;
-
-  position: absolute;
-  width: 1299px;
-  height: 533px;
-  left: 311px;
-  top: 1245px;
 }
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 150px 310px;
-  gap: 10px;
 
-  position: absolute;
-  width: 1919.78px;
-  height: 990px;
-  left: 0px;
-  top: 1927px;
-
+.main-content_grey-bg {
   background: #F4F8FF;
 }
 
-.trusted-by {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 40px;
-
-  position: absolute;
-  width: 1299px;
-  height: 335px;
-  left: 310px;
-  top: 3048px;
-}
-
-.callout {
-  position: absolute;
-  width: 1920px;
-  height: 500px;
-  left: 0px;
-  top: 3524px;
-}
-
-.main__learn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 53px;
-  
-  position: absolute;
-  width: 1300px;
-  height: 819px;
-  left: 310px;
-  top: 4169px;
-}
-
-.chapter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 148px 310px;
-  gap: 10px;
-  
-  position: absolute;
-  width: 1920px;
-  height: 1200px;
-  left: 0px;
-  top: 5132px;
-  
-  background: #F4F8FF;
-}
-
-.testimonial {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 111px;
-  
-  position: absolute;
-  width: 1299px;
-  height: 649px;
-  left: 310px;
-  top: 6473px;
-}
-
-.blog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 145px 310px;
-  gap: 10px;
-  
-  position: absolute;
-  width: 1920px;
-  height: 1016px;
-  left: 0px;
-  top: 7262px;
-  
-  background: #F4F8FF;
-}
-
-.callout-under-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 121px 230px;
-  gap: 10px;
-  
-  position: absolute;
-  width: 1300px;
-  height: 505.65px;
-  left: 310px;
-  top: 8439px;
-  
-  background: #FFCA42;
-}
-
-.h4-main {
+.main-title {
   font-family: 'Cardo';
-  font-style: normal;
   font-weight: 700;
   font-size: 45px;
-  line-height: 120%;
+  color: $primary;
 }
 
+.line-secondary_main-margin {
+  margin-top: 20px;
+}
+
+.main-books {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 58px;
+}
+
+.book-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.book-main:not(:first-child) {
+  margin-left: 66px;
+}
+
+.book-main__img {
+  width: 280px;
+  height: 380px;
+  margin-right: 40px;
+  block-size: border-box;
+
+  box-shadow: 0px 20px 25px rgba(4, 11, 20, 0.1);
+  
+  border: 10px solid #DBE1E9;
+}
+
+.book-main__1-img {
+  width: 292px;
+  height: 392px;
+
+  background: #F9FBFF;
+
+  border: 4px solid #DBE1E9;
+}
+
+.book-main-title {
+  font-family: 'Cardo';
+  font-weight: 700;
+  font-size: 32px;
+  color: $primary;
+}
+
+.book-main-sub-title {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 180%;
+  color: #969AA0;
+}
+
+.book-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 280px;
+}
+
+.details-item__title_color-primary {
+  color: $primary;
+}
+
+.details-item__sub-title_color-grey {
+  color: #969AA0;
+}
+
+.details-main {
+  display: flex;
+  flex-direction: row;
+
+  margin: 30px 0;
+}
+
+.button__order_main-solor-size {
+  width: 220px;
+  height: 65px;
+
+  background: 0;
+
+  border: 1px solid #FFCA42;
+}
+
+.details-item_margin-main:not(:first-child) {
+  margin-left: 70px;
+}
